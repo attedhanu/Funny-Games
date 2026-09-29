@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Telugu Movie Challenge 🎬</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================================================= -->
+<!-- START PAGE -->
+<!-- ================================================= -->
+
+<div id="startPage" class="screen">
+
+    <div class="card start-card">
+
+        <div class="big-emoji">
+            🎬😂
+        </div>
+
+        <h1>
+            Telugu Movie Challenge
+        </h1>
+
+        <h2>
+            🎮 FUN MOVIE GAME 🎮
+        </h2>
+
+
+        <div class="rules">
+
+            <p>🎭 A dialogue or comedy scene will appear</p>
+
+            <p>⌨️ Type ONLY the movie name</p>
+
+            <p>⏱️ You have exactly 15 seconds</p>
+
+            <p>⭐ Get points for correct answers</p>
+
+            <p>😂 Wrong answer = funny reaction</p>
+
+        </div>
+
+
+        <button
+            class="start-button"
+            onclick="startGame()">
+
+            🚀 START GAME
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- GAME PAGE -->
+<!-- ================================================= -->
+
+<div id="gamePage" class="screen hidden">
+
+    <div class="card game-card">
+
+
+        <!-- TOP BAR -->
+
+        <div class="top">
+
+            <span id="questionNumber">
+                Question 1/10
+            </span>
+
+
+            <span id="timer">
+                ⏱️ 15
+            </span>
+
+
+            <span id="score">
+                ⭐ 0
+            </span>
+
+        </div>
+
+
+
+        <!-- PROGRESS BAR -->
+
+        <div class="progress">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+
+
+        <div class="game-emoji">
+            🎭
+        </div>
+
+
+        <h1>
+            Guess the Movie!
+        </h1>
+
+
+
+        <!-- SCENE / DIALOGUE -->
+
+        <div class="dialogue-box">
+
+            <div class="dialogue-title">
+
+                🎬 DIALOGUE / COMEDY SCENE
+
+            </div>
+
+
+            <p id="dialogue">
+
+                Scene will appear here
+
+            </p>
+
+        </div>
+
+
+
+        <!-- INSTRUCTION -->
+
+        <p class="instruction">
+
+            ⌨️ Type ONLY the MOVIE NAME
+
+        </p>
+
+
+
+        <!-- ANSWER INPUT -->
+
+        <input
+            type="text"
+            id="answerInput"
+            placeholder="Enter movie name..."
+            autocomplete="off"
+        >
+
+
+
+        <!-- CHECK BUTTON -->
+
+        <button
+            id="checkButton"
+            class="check-button"
+            onclick="checkAnswer()">
+
+            ✅ CHECK ANSWER
+
+        </button>
+
+
+
+        <p id="status">
+
+            Type your answer and click Check Answer
+
+        </p>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- RESULT PAGE -->
+<!-- ================================================= -->
+
+<div
+    id="resultPage"
+    class="result-overlay hidden">
+
+
+    <div class="result-card">
+
+
+        <div id="resultEmoji">
+            🎉
+        </div>
+
+
+        <h1 id="resultMessage">
+            Correct!
+        </h1>
+
+
+        <p id="resultMovie">
+        </p>
+
+
+        <div id="resultStars">
+            ⭐ ⭐ ⭐
+        </div>
+
+
+        <button onclick="nextQuestion()">
+
+            ➡️ NEXT QUESTION
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- FINAL PAGE -->
+<!-- ================================================= -->
+
+<div id="finalPage" class="screen hidden">
+
+
+    <div class="card final-card">
+
+
+        <div class="trophy">
+            🏆
+        </div>
+
+
+        <h1>
+            GAME COMPLETE!
+        </h1>
+
+
+        <h2 id="finalScore">
+            ⭐ Score: 0/10
+        </h2>
+
+
+        <div class="final-stars">
+            ⭐ ⭐ ⭐ ⭐ ⭐
+        </div>
+
+
+        <p>
+            🎬 You are a Movie Master!
+        </p>
+
+
+        <button onclick="restartGame()">
+
+            🔄 PLAY AGAIN
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
